@@ -1,12 +1,12 @@
-import getUserCity from "./fetchUserdata.js";
+import getUserInfo from './fetchUserdata.js';
 import { getPrayerTimes } from "./fetchPrayerTime.js";
-
 
 const year = new Date().getFullYear();
 const month = new Date().getMonth() + 1;
 let data;
 
 function displyTodayPrayerTimes(data, city, country) {
+
     const today = new Date().getDate();
     const todayPrayerTimes = data[today - 1].timings;
     const todayPrayerTimesDiv = document.querySelector(".todayPrayerTimes");
@@ -25,9 +25,10 @@ function displyTodayPrayerTimes(data, city, country) {
 }
 
 async function init() {
-    const userCity = await getUserCity();
-    data = await getPrayerTimes(userCity.city, userCity.country, month, year);
-    displyTodayPrayerTimes(data, userCity.city, userCity.country);
+    const userCity = await getUserInfo();
+    console.log(userCity)
+    data = await getPrayerTimes(userCity.city, userCity.country_name, month, year);
+    displyTodayPrayerTimes(data, userCity.city, userCity.country_name);
 }
 
 init();
