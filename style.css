@@ -1,0 +1,43 @@
+/* General styling for the prayer times container */
+.todayPrayerTimes {
+    font-family: 'Arial', sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.todayPrayerTimes h3 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.todayPrayerTimes p {
+    color: #666;
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+/* Specific styling for the date, city, and country information */
+.todayPrayerTimes p:nth-child(2),
+.todayPrayerTimes p:nth-child(3),
+.todayPrayerTimes p:nth-child(4) {
+    font-weight: bold;
+    color: #444;
+}
+
+/* Styling for prayer times */
+.todayPrayerTimes p:nth-child(n+5) {
+    background-color: #e8e8e8;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+/* Highlight the current prayer time if needed (Optional) */
+.todayPrayerTimes .currentPrayer {
+    background-color: #d1eaff;
+    color: #205081;
+}
