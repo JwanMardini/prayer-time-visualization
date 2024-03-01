@@ -28,6 +28,7 @@ function displyTodayPrayerTimes(data, city, country) {
     `;
 }
 
+
 async function init() {
     countryInput.value = "Sweden"
     const userCity = await getUserInfo();
