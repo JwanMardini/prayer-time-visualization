@@ -13,6 +13,24 @@
     </header>
     <br> <br>
     <main>
+        <form action="" id="myform">
+            <div class="form-group">
+                <label for="city">City</label>
+                <input name="city" type="text" class="form-control" id="cityInput" aria-describedby="emailHelp" placeholder="Enter city" required>
+                <small id="emailHelp" class="form-text text-muted">Enter a city to get more accurate resulte.</small>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="country">Country</label>
+                <input name="country" type="text" class="form-control" id="countryInput" aria-describedby="emailHelp" placeholder="Sweden">
+                <small id="emailHelp" class="form-text text-muted">Enter a country to get more accurate resulte.</small>
+            </div>
+
+            <br>
+            <button type="submit" class="btn btn-secondary" id="submit">See Prayers</button>
+
+        </form>
+        <br><br>
         <div class="todayPrayerTimes">
 
         </div>

@@ -3,6 +3,10 @@ import { getPrayerTimes } from "./fetchPrayerTime.js";
 
 const year = new Date().getFullYear();
 const month = new Date().getMonth() + 1;
+
+const cityInput = document.getElementById("cityInput")
+const countryInput = document.getElementById("countryInput")
+const myform = document.getElementById("myform")
 let data;
 
 function displyTodayPrayerTimes(data, city, country) {
@@ -25,6 +29,7 @@ function displyTodayPrayerTimes(data, city, country) {
 }
 
 async function init() {
+    countryInput.value = "Sweden"
     const userCity = await getUserInfo();
     console.log(userCity)
     data = await getPrayerTimes(userCity.city, userCity.country_name, month, year);
@@ -33,6 +38,12 @@ async function init() {
 
 init();
 
+
+myform.addEventListener("submit", async event =>{
+    event.preventDefault()
+    data = await getPrayerTimes(cityInput.value.trim(), countryInput.value.trim(), month, year);
+    displyTodayPrayerTimes(data, cityInput.value.trim(), countryInput.value.trim());
+})
 
 // function displayPrayerTimes(data) {
 //     const table = document.querySelector(".table");
