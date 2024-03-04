@@ -9,9 +9,17 @@ body.dark-mode {
     background-color: #333;
     color: #fff;
 }
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
 
+header h1{
+    margin: 0; /* Removes default margins to better control spacing */
+}
 
-/* Button base styles */
 #modeToggle {
     padding: 10px 20px;
     border: none;
@@ -25,24 +33,22 @@ body.dark-mode {
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
+    margin-left: auto; /* Pushes the button to the far right */
 }
 
-/* Button hover styles */
+/* Add hover, focus, and active styles as previously discussed */
 #modeToggle:hover {
     background-color: #0056b3; /* Darker shade for hover effect */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(-2px);
 }
 
-/* Button focus styles */
 #modeToggle:focus {
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
-/* Button active styles */
 #modeToggle:active {
     background-color: #004085; /* Even darker shade for active state */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     transform: translateY(0);
 }
-
