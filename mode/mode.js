@@ -1,3 +1,4 @@
+// Description: This file contains the JavaScript code for the mode toggle button.
 document.getElementById('modeToggle').addEventListener('click', function() {
     const body = document.body;
     body.classList.toggle('dark-mode');
